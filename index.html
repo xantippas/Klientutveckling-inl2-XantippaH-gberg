@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Bungee+Shade&family=Bungee+Inline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="light">
+    <header>
+        <img src="headerImage.png" alt="Rick & Morty, MrPoopyButthole" class="headerImage">
+        <h1>Trivia Quiz</h1>
+    </header>
+    <nav>
+        <button class="change" id="toggle"><span class="material-icons-outlined">dark_mode</span></button>
+    </nav>
+        
+    <main>
+        <div class="choiceContainer">
+            <section id="chooseDifficulty">
+                <h2>Choose Difficulty</h2>
+                <div class="inputDifficulty">
+                <label for="all">All</label>
+                <input type="radio" name="difficulty" id="all" value=""/>
+                <label for="easy">Easy</label>
+                <input type="radio" name="difficulty" id="easy" value="easy"/>
+                <label for="medium">Medium</label>
+                <input type="radio" name="difficulty" id="medium" value="medium"/>
+                <label for="difficult">Difficult</label>
+                <input type="radio" name="difficulty" id="difficult" value="difficult"/>
+                </div>
+            </section>
+
+            <section id="chooseAmountOfQ">
+                <h2>Choose Amount of Questions</h2>
+                <div class="inputAmount">
+                <label for="numQ">Amount (10-50)</label>
+                <input type="number" name="numQ" id="numQ"/>
+            </div>
+            </section>
+
+            <section id="chooseCategory">
+                <h2>Choose Category</h2>
+                <div class="inputCat">
+                <select name="category" id="inputCategory">
+                    <option value="9" class="catText">General Knowledge</option>
+                    <option value="15" class="catText">Entertainment: Video Games</option>
+                    <option value="23" class="catText">History</option>
+                </select>
+            </div>
+            </section>
+
+            <section id="type">
+                <h2>Choose type of Game</h2>
+                <div class="inputGameType">
+                <label for="boolean">True/False</label>
+                <input type="radio" name="type" id="boolean" value="boolean"/>
+                <label for="mc">Multiple Choice</label>
+                <input type="radio" name="type" id="mc" value="multiple"/>
+            </div>
+            </section>
+
+            <button id="startGame">Play</button>
+        </div>
+    
+        <p id="chosenCategory"></p>
+    
+        <div class="container">
+            <div class="questionContainer">
+                <p id="question"></p>
+            </div>
+
+            <div class="trueorfalseContainer"></div>
+            <div class="answerContainer"></div>
+
+            <p id="result"></p>
+        </div>
+
+    </main>
+
+    <section class="scoreBoard">
+    <div class="finalScores"></div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

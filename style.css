@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    color: black;
+}
+
+header {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 2px #000;
+    display: flex;
+    justify-content: center;
+}
+
+.headerImage {
+    width: 150px;
+    height: 150px;
+    padding-top: 10px;
+    margin-left: -155px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+
+#toggle {
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 40px;
+    transition: 0.5s;
+    background-color: white;
+}
+
+.choiceContainer {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+    background-color: white;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #46B1C9;
+    margin-bottom: 10px;
+}
+
+section {
+    width: 100%;
+}
+
+label {
+    font-size: 12px;
+    color: gray;
+}
+
+.inputDifficulty, .inputAmount, .inputCat, .inputGameType {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#startGame {
+    width: 150px;
+    height: 40px;
+    justify-self: center;
+    border-radius: 15px;
+    background-color: white;
+    color: #46B1C9;
+    border: 2px solid lightblue;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#startGame:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+
+#chosenCategory {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 480px;
+    width: 400px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px 5px gray;
+}
+
+.questionContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 1px solid gray;
+}
+
+#question {
+    display: flex;
+    text-align: center;
+    padding: 15px;
+}
+
+.answerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 50px;
+}
+
+.trueorfalseContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.answerText {
+    padding: 30px 50px;
+    margin: 5px;
+    font-size: 22px;
+    height: 110px;
+    max-width: 200px;
+    border: none;
+    background-color: lightblue;
+}
+
+.answerText:hover {
+    background-color: rgb(121, 168, 185);
+    cursor: pointer;
+}
+
+.multipleText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-size: 16px;
+    min-height: 100px;
+    min-width: 180px;
+    max-height: 100px;
+    max-width: 200px;
+    border: none;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.multipleText:hover {
+    background-color: rgb(121, 168, 185);
+}
+
+#result {
+    text-align: center;
+    padding: 10px;
+    font-size: 35px;
+}
+
+.scoreBoard {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.finalScores {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.resultButton {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.resultButton:hover {
+    background-color: white;
+    border: white;
+}
+
+.newGameBtn {
+    padding: 10px 25px;
+    font-size: 1.5em;
+    border-radius: 15px;
+    background-color: lightgray;
+    border: none;
+}
+
+.newGameBtn:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+
+/* ---------------------------------------------
+            light and dark theme 
+------------------------------------------------*/
+
+body.light {
+    transition: 0.5s;
+    background-color: lightblue;
+}
+
+body.light.dark {
+    transition: 0.5s;
+    background-color: #24292d;
+}
+
+body.light.dark .choiceContainer, body.light.dark .container {
+    background-color: #404852;
+    transition: 0.5s;
+} 
+
+body.light .choiceContainer, body.light .container {
+    background-color: white;
+    transition: 0.5s;
+}
+
+body.light.dark label {
+    color: white;
+    background-color: #404852;
+}
+
+body.light label {
+    color: gray;
+    background-color: white;
+}
+
+body.light.dark #startGame {
+    background-color: #6c6f74;
+    border: none;
+}
+
+body.light.dark #startGame:hover {
+    background-color: #24292d;
+}
+
+body.light.dark .answerText {
+    background-color: #6c6f74;
+    border: 1px solid #46B1C9;
+    color: #46B1C9;
+}
+
+body.light.dark .answerText:hover {
+    background-color: #24292d;
+}
+
+body.light.dark .multipleText {
+    background-color: #6c6f74;
+    border: 1px solid #46B1C9;
+    color: #46B1C9;
+}
+
+body.light.dark .multipleText:hover {
+    background-color: #24292d;
+}
+
+body.light.dark .questionContainer {
+    background-color: white;
+    border: 1px solid black;
+}
+
+body.light .questionContainer {
+    background-color: white;
+    border:1px solid gray;
+}
