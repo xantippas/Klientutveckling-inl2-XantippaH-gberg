@@ -13,6 +13,26 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      location="europe-west1"
+      project-id="ccai-playground-itsam"
+      agent-id="97eeb587-6e45-4a5d-8989-71d3892de501"
+      language-code="en">
+      <df-messenger-chat
+       chat-title="summit-devoteam" chat-icon="">
+      </df-messenger-chat>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        width: 350px;
+      }
+    </style>
 </head>
 <body class="light">
     <header>
@@ -91,5 +111,6 @@
     </section>
 
     <script src="main.js"></script>
+    
 </body>
 </html>
